@@ -12,14 +12,14 @@ To build run the following command in the root folder.
 
 ## Run
 
-To run the code, you will need to setup a Discord application and bot by following [this documentation](https://docs.stillu.cc/guides/getting_started/first-bot.html). Once that is done you will need to take the Token created for your bot and paste it into the "DiscordToken" appsetting found in `TriviaDiscordBot/appsettings.json`.  
+To run the code, you will need to setup a Discord application and bot by following [this documentation](https://discord.foxbot.me/latest/guides/getting_started/first-bot.html#creating-a-discord-bot). Once that is done you will need to take the Token created for your bot and paste it into the "DiscordToken" appsetting found in `TriviaDiscordBot/appsettings.json`.  
 Now you can run the application by running the following command in the root of the repo.
 
     dotnet run --project TriviaDiscordBot
 
 ## How to use the bot
 
-First you will need to add your bot to your server using the documentation found [here](https://docs.stillu.cc/guides/getting_started/first-bot.html#adding-your-bot-to-a-server). Once that is done all you should need to do is run the project and type `!question` into a text channel in the server you added the bot to.
+First you will need to add your bot to your server using the documentation found [here](https://discord.foxbot.me/latest/guides/getting_started/first-bot.html#adding-your-bot-to-a-server). Once that is done all you should need to do is run the project and type `!question` into a text channel in the server you added the bot to.
 
 ![Example Command in Discord](readme.images/example-command.png)
 
