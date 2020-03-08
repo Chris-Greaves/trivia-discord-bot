@@ -22,3 +22,9 @@ Now you can run the application by running the following command in the root of 
 First you will need to add your bot to your server using the documentation found [here](https://docs.stillu.cc/guides/getting_started/first-bot.html#adding-your-bot-to-a-server). Once that is done all you should need to do is run the project and type `!question` into a text channel in the server you added the bot to.
 
 ![Example Command in Discord](readme.images/example-command.png)
+
+## Features still needed
+
+- Ability to set difficulty
+- Ability to specify specific Category
+- Command to explain all the question command and what categories are available
