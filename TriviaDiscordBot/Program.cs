@@ -22,21 +22,21 @@ namespace BasicDiscordBot
 				.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 			_configuration = builder.Build();
 
+			_handler = new TriviaHandler(new HttpClient());
+
 			_client = new DiscordSocketClient();
 			_client.Log += Log;
 			await _client.LoginAsync(TokenType.Bot,
 				_configuration.GetConnectionString("DiscordToken"));
 			await _client.StartAsync();
 
-			_handler = new TriviaHandler(new HttpClient());
-
-			_client.MessageReceived += _client_MessageReceived;
+			_client.MessageReceived += HandleMessageReceivedEvent;
 
 			// Block this task until the program is closed.
 			await Task.Delay(-1);
 		}
 
-		private Task _client_MessageReceived(SocketMessage message)
+		private Task HandleMessageReceivedEvent(SocketMessage message)
 		{
 			Console.WriteLine($"Message Received: {message}");
 			return _handler.HandleMessage(message);

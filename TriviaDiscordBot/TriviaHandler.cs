@@ -23,7 +23,7 @@ namespace BasicDiscordBot
 
             if (messageText.ToCharArray()[0] == '!' && !message.Author.IsBot)
             {
-                if (messageText == "!question")
+                if (messageText.StartsWith("!question"))
                 {
                     await SendQuestion(message);
                 }
@@ -54,7 +54,7 @@ namespace BasicDiscordBot
             var question = response.Results[0];
 
             var sb = new StringBuilder();
-            sb.Append("Trivia Question!\n\n");
+            sb.Append("\nTrivia Question!\n\n");
             sb.Append($"Category: **{question.Category}**\n");
             sb.Append($"Type: **{question.Type}**\n");
             sb.Append($"Difficulty: **{question.Difficulty}**\n\n");
